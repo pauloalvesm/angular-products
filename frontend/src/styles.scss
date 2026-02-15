@@ -1,4 +1,18 @@
 @import "@angular/material/prebuilt-themes/indigo-pink.css";
 
+:root {
+  --white-color-1: #FFF;
+  --green-color-1: #28A745;
+  --red-color-1: #E35E6B;
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.item-color {
+  color: var(--red-color-1);
+}
+
+.v-middle {
+    vertical-align: middle;
+}
