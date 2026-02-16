@@ -1,0 +1,16 @@
+.home {
+  padding: 10px;
+
+  .title {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
+    display: block;
+  }
+
+  .subtitle {
+    font-size: 1.1em;
+    display: block;
+    color: var(--dark-color-1);
+  }
+}
