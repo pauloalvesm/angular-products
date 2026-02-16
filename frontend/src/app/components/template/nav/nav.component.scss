@@ -1,0 +1,26 @@
+.sidenav {
+    background-color: var(--blue-color-1);
+    width: 200px;
+}
+
+.sidenav ::ng-deep .material-icons {
+    color: var(--white-color-1) !important;
+}
+
+.sidenav ::ng-deep .mdc-list-item__primary-text,
+.sidenav ::ng-deep .mat-mdc-list-item-title,
+.sidenav ::ng-deep .mat-mdc-list-item-unscoped-content,
+.sidenav a {
+    color: var(--white-color-1) !important;
+}
+
+.sidenav i {
+    padding-right: 10px;
+    vertical-align: middle;
+}
+
+.content {
+    padding: 16px;
+    background-color: var(--white-color-1);
+}
+
