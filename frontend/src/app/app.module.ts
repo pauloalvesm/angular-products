@@ -13,6 +13,7 @@ import { MatCardModule } from '@angular/material/card';
 
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './modules/home/home.module';
+import { ProductModule } from './modules/product/product.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HomeModule } from './modules/home/home.module';
     MatListModule,
     MatCardModule,
     SharedModule,
-    HomeModule
+    HomeModule,
+    ProductModule
   ],
   providers: [],
   bootstrap: [AppComponent]
