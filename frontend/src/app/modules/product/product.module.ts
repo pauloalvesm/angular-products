@@ -3,13 +3,16 @@ import { CommonModule } from '@angular/common';
 import { ProductComponent } from './components/product/product.component';
 import { ProductCreateComponent } from './components/product-create/product-create.component';
 
+import { MatButtonModule } from '@angular/material/button';
+
 @NgModule({
   declarations: [
     ProductComponent,
     ProductCreateComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatButtonModule
   ],
   exports: [
     ProductComponent,
