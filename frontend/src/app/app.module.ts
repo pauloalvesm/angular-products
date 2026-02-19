@@ -14,6 +14,7 @@ import { MatCardModule } from '@angular/material/card';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './modules/home/home.module';
 import { ProductModule } from './modules/product/product.module';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ProductModule } from './modules/product/product.module';
     MatCardModule,
     SharedModule,
     HomeModule,
-    ProductModule
+    ProductModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
