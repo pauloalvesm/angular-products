@@ -5,6 +5,7 @@
   --green-color-1: #28A745;
   --red-color-1: #E35E6B;
   --blue-color-1: #3F51B5;
+  --blue-color-2: #4DC5F5;
   --dark-color-1: #00000099;
 }
 
@@ -17,4 +18,47 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .v-middle {
     vertical-align: middle;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.actions-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 8px 0;
+}
+
+.mat-mdc-raised-button {
+  min-width: 100px;
+}
+
+mat-card-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.mat-mdc-card-header-text {
+  margin: 0 !important;
+}
+
+.card-title {
+  color: var(--blue-color-2);
+}
+
+.success-button {
+  background-color: var(--green-color-1) !important;
+  color: var(--white-color-1) !important;
+}
+
+.success-button:hover {
+  filter: brightness(90%);
 }
