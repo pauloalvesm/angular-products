@@ -9,6 +9,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCard, MatCardTitle, MatCardModule } from "@angular/material/card";
 import { ProductReadComponent } from './components/product-read/product-read.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { ProductReadComponent } from './components/product-read/product-read.com
     MatInputModule,
     MatCard,
     MatCardTitle,
-    MatCardModule
+    MatCardModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
 ],
   exports: [
     ProductComponent,
