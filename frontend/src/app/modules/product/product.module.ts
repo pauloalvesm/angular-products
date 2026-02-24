@@ -8,11 +8,13 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCard, MatCardTitle, MatCardModule } from "@angular/material/card";
+import { ProductReadComponent } from './components/product-read/product-read.component';
 
 @NgModule({
   declarations: [
     ProductComponent,
-    ProductCreateComponent
+    ProductCreateComponent,
+    ProductReadComponent
   ],
   imports: [
     CommonModule,
