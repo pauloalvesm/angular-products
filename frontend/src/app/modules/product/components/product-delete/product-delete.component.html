@@ -1,0 +1,32 @@
+@if (product) {
+<mat-card class="product-card">
+  <mat-card-header>
+    <mat-card-title class="card-title">Delete Product</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form class="form-container">
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" name="name" [(ngModel)]="product.name" readonly>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Price</mat-label>
+        <input matInput placeholder="Price" name="price" type="number" [(ngModel)]="product.price" readonly>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+
+  <div class="actions-row">
+    <button mat-raised-button (click)="cancel()" title="Cancel">
+      Cancel
+    </button>
+    <button mat-raised-button (click)="deleteProduct()" class="delete-button" color="warn" title="Delete">
+      Delete
+    </button>
+  </div>
+</mat-card>
+} @else {
+  <p>Loading product data...</p>
+}

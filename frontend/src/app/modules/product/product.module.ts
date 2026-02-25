@@ -14,13 +14,15 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { ProductUpdateComponent } from './components/product-update/product-update.component';
 import { RouterModule } from '@angular/router';
+import { ProductDeleteComponent } from './components/product-delete/product-delete.component';
 
 @NgModule({
   declarations: [
     ProductComponent,
     ProductCreateComponent,
     ProductReadComponent,
-    ProductUpdateComponent
+    ProductUpdateComponent,
+    ProductDeleteComponent
   ],
   imports: [
     CommonModule,

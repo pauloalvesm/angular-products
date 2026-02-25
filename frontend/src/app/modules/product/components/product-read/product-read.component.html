@@ -43,7 +43,7 @@
         <a [routerLink]="['/products/update', row.id]" class="edit edit-icon" title="Edit">
           <i class="material-icons">edit</i>
         </a>
-        <a routerLink="" class="delete delete-icon" title="Delete">
+        <a [routerLink]="['/products/delete', row.id]" class="delete delete-icon" title="Delete">
           <i class="material-icons">delete</i>
         </a>
       </td>
