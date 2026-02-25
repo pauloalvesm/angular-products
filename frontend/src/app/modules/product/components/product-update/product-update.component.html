@@ -1,0 +1,30 @@
+@if (product) {
+  <mat-card class="product-card">
+    <mat-card-header>
+      <mat-card-title class="card-title">Update Product</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form class="form-container">
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Name" name="name" [(ngModel)]="product.name">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Price</mat-label>
+          <input matInput placeholder="Price" name="price" type="number" [(ngModel)]="product.price">
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+
+    <div class="actions-row">
+      <button mat-raised-button (click)="cancel()" title="Cancel">Cancel</button>
+      <button mat-raised-button (click)="updateProduct()" class="success-button" title="Save">Save</button>
+    </div>
+  </mat-card>
+} @else {
+  <mat-card>
+    <mat-card-content>Carregando dados do produto...</mat-card-content>
+  </mat-card>
+}

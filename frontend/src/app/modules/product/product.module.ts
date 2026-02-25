@@ -12,15 +12,21 @@ import { ProductReadComponent } from './components/product-read/product-read.com
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { ProductUpdateComponent } from './components/product-update/product-update.component';
+import { RouterModule } from '@angular/router';
+import { ProductDeleteComponent } from './components/product-delete/product-delete.component';
 
 @NgModule({
   declarations: [
     ProductComponent,
     ProductCreateComponent,
-    ProductReadComponent
+    ProductReadComponent,
+    ProductUpdateComponent,
+    ProductDeleteComponent
   ],
   imports: [
     CommonModule,
+    RouterModule,
     MatButtonModule,
     FormsModule,
     MatFormFieldModule,

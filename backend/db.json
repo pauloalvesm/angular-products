@@ -1,22 +1,22 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Caneta BIC Preta",
       "price": "5.99"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Box Trilogia O Senhor dos Anéis",
       "price": 171.45
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Notebook Mac Pro",
       "price": 12000.89
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Sansung S20+ Ultra",
       "price": 7520.89
     }
