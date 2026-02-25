@@ -71,3 +71,12 @@ mat-card-header {
 .info-button:hover {
   filter: brightness(90%);
 }
+
+.delete-button {
+  background-color: var(--red-color-1) !important;
+  color: var(--white-color-1) !important;
+}
+
+.delete-button:hover {
+  filter: brightness(90%);
+}
