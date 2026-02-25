@@ -5,7 +5,7 @@
   --green-color-1: #28A745;
   --red-color-1: #E35E6B;
   --blue-color-1: #3F51B5;
-  --blue-color-2: #4DC5F5;
+  --blue-color-2: #09B8FD;
   --dark-color-1: #00000099;
 }
 
@@ -60,5 +60,14 @@ mat-card-header {
 }
 
 .success-button:hover {
+  filter: brightness(90%);
+}
+
+.info-button {
+  background-color: var(--blue-color-1) !important;
+  color: var(--white-color-1) !important;
+}
+
+.info-button:hover {
   filter: brightness(90%);
 }
