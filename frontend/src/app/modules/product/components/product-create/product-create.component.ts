@@ -7,29 +7,34 @@ import { Product } from '../../../../core/models/product/Product';
   selector: 'app-product-create',
   standalone: false,
   templateUrl: './product-create.component.html',
-  styleUrl: './product-create.component.scss'
+  styleUrl: './product-create.component.scss',
 })
 export class ProductCreateComponent implements OnInit {
-
   product: Product = {
     name: '',
-    price: 0
-  }
+    price: 0,
+  };
 
-  constructor(private productService: ProductService, private router: Router) {}
+  constructor(
+    private productService: ProductService,
+    private router: Router,
+  ) {}
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   createProduct(): void {
-    this.productService.create(this.product).subscribe(() => {
-      this.productService.showMessage('Product created!');
-      this.router.navigate(['/products']);
+    this.productService.create(this.product).subscribe({
+      next: () => {
+        this.productService.showMessage('Product created successfully!');
+        this.router.navigate(['/products']);
+      },
+      error: (error) => {
+        this.productService.showMessage('An error occurred while creating the product!',true);
+      },
     });
   }
 
   cancel(): void {
-    this.router.navigate(['/products'])
+    this.router.navigate(['/products']);
   }
 }

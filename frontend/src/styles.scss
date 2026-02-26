@@ -103,6 +103,24 @@ mat-card-header {
   padding: 8px 0;
 }
 
+.mat-mdc-snack-bar-container.msg-success {
+  --mdc-snackbar-container-color: var(--green-color-1);
+  --mat-snack-bar-button-color: var(--white-color-1);
+
+  .mdc-snackbar__label {
+    color: var(--white-color-1) !important;
+  }
+}
+
+.mat-mdc-snack-bar-container.msg-error {
+  --mdc-snackbar-container-color: var(--red-color-1);
+  --mat-snack-bar-button-color: var(--white-color-1);
+
+  .mdc-snackbar__label {
+    color: var(--white-color-1) !important;
+  }
+}
+
 @media (max-width: 600px) {
   .product-card {
     margin: 0.5em auto;

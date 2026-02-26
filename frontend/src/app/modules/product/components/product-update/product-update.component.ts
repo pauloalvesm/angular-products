@@ -22,19 +22,34 @@ export class ProductUpdateComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
 
     if (id) {
-      this.productService.readById(id).subscribe((product) => {
-        this.product = product;
+      this.productService.readById(id).subscribe({
+        next: (product) => {
+          this.product = product;
+        },
+        error: (error) => {
+          this.productService.showMessage('Error loading product data!', true);
+          this.router.navigate(['/products']);
+        },
       });
     } else {
-      this.productService.showMessage('ID not found in URL!');
+      this.productService.showMessage('ID not found in URL!', true);
       this.router.navigate(['/products']);
     }
   }
 
   updateProduct(): void {
-    this.productService.update(this.product).subscribe(() => {
-      this.productService.showMessage('Product successfully updated!');
-      this.router.navigate(['/products']);
+    this.productService.update(this.product).subscribe({
+      next: () => {
+        this.productService.showMessage('Product successfully updated!');
+        this.router.navigate(['/products']);
+      },
+      error: (err) => {
+        this.productService.showMessage(
+          'Error updating product. Try again!',
+          true,
+        );
+        console.error(err);
+      },
     });
   }
 
