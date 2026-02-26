@@ -1,6 +1,7 @@
 .sidenav {
     background-color: var(--blue-color-1);
     width: 200px;
+    transition: width 0.3s;
 }
 
 .sidenav ::ng-deep .material-icons {
@@ -22,5 +23,35 @@
 .content {
     padding: 16px;
     background-color: var(--white-color-1);
+    margin-left: 200px;
+    transition: margin-left 0.3s ease;
 }
 
+@media (max-width: 1024px) {
+    .sidenav {
+        width: 150px;
+    }
+    .content {
+        margin-left: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidenav {
+        width: 70px;
+    }
+    .content {
+        margin-left: 70px;
+    }
+
+    .sidenav a {
+        display: flex;
+        justify-content: center;
+        font-size: 0;
+    }
+
+    .sidenav i {
+        padding-right: 0;
+        margin: 0;
+    }
+}
