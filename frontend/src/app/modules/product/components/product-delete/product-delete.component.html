@@ -1,32 +1,35 @@
 @if (product) {
-<mat-card class="product-card">
+<mat-card class="product-card animation-pulse-2s">
   <mat-card-header>
     <mat-card-title class="card-title">Delete Product</mat-card-title>
+    <mat-card-subtitle>Are you sure you want to delete this product?</mat-card-subtitle>
   </mat-card-header>
 
   <mat-card-content>
     <form class="form-container">
       <mat-form-field appearance="outline">
         <mat-label>Name</mat-label>
-        <input matInput placeholder="Name" name="name" [(ngModel)]="product.name" readonly>
+        <input matInput [value]="product.name" disabled>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Price</mat-label>
-        <input matInput placeholder="Price" name="price" type="number" [(ngModel)]="product.price" readonly>
+        <input matInput [value]="product.price" type="number" disabled>
       </mat-form-field>
     </form>
   </mat-card-content>
 
   <div class="actions-row">
-    <button mat-raised-button (click)="cancel()" title="Cancel">
+    <button mat-raised-button (click)="cancel()">
       Cancel
     </button>
-    <button mat-raised-button (click)="deleteProduct()" class="delete-button" color="warn" title="Delete">
+    <button mat-raised-button (click)="deleteProduct()" color="warn">
       Delete
     </button>
   </div>
 </mat-card>
 } @else {
-  <p>Loading product data...</p>
+  <mat-card>
+    <mat-card-content>Loading product data...</mat-card-content>
+  </mat-card>
 }

@@ -7,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   selector: 'app-product-delete',
   standalone: false,
   templateUrl: './product-delete.component.html',
-  styleUrl: './product-delete.component.scss'
+  styleUrl: './product-delete.component.scss',
 })
 export class ProductDeleteComponent implements OnInit {
   product!: Product;
@@ -22,11 +22,18 @@ export class ProductDeleteComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
 
     if (id) {
-      this.productService.readById(id).subscribe((product) => {
-        this.product = product;
+      this.productService.readById(id).subscribe({
+        next: (product) => {
+          this.product = product;
+        },
+        error: (error) => {
+          this.productService.showMessage(
+            'Error loading product for deletion!', true);
+          this.router.navigate(['/products']);
+        },
       });
     } else {
-      this.productService.showMessage('ID not found in URL!');
+      this.productService.showMessage('ID not found in URL!', true);
       this.router.navigate(['/products']);
     }
   }
@@ -35,17 +42,25 @@ export class ProductDeleteComponent implements OnInit {
     const id = this.product.id;
 
     if (id) {
-      this.productService.delete(id).subscribe(() => {
-        this.productService.showMessage('Product successfully deleted!');
-        this.router.navigate(['/products']);
+      this.productService.delete(id).subscribe({
+        next: () => {
+          this.productService.showMessage('Product successfully deleted!');
+          this.router.navigate(['/products']);
+        },
+        error: (error) => {
+          this.productService.showMessage(
+            'Error deleting product. Try again!',
+            true,
+          );
+          console.error(error);
+        },
       });
     } else {
-      this.productService.showMessage('Error: Product ID not found.');
+      this.productService.showMessage('Error: Product ID not found.', true);
     }
   }
 
   cancel(): void {
     this.router.navigate(['/products']);
   }
-
 }

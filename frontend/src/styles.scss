@@ -80,3 +80,67 @@ mat-card-header {
 .delete-button:hover {
   filter: brightness(90%);
 }
+
+.product-card {
+  width: 95%;
+  max-width: 700px;
+  margin: 1em auto;
+  padding: 16px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.actions-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 8px 0;
+}
+
+.mat-mdc-snack-bar-container.msg-success {
+  --mdc-snackbar-container-color: var(--green-color-1);
+  --mat-snack-bar-button-color: var(--white-color-1);
+
+  .mdc-snackbar__label {
+    color: var(--white-color-1) !important;
+  }
+}
+
+.mat-mdc-snack-bar-container.msg-error {
+  --mdc-snackbar-container-color: var(--red-color-1);
+  --mat-snack-bar-button-color: var(--white-color-1);
+
+  .mdc-snackbar__label {
+    color: var(--white-color-1) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-card {
+    margin: 0.5em auto;
+    padding: 8px;
+    border-radius: 0;
+  }
+
+  .actions-row {
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+
+  .mat-mdc-raised-button {
+    width: 100%;
+    height: 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-card {
+    margin: 2em auto;
+  }
+}
