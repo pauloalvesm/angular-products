@@ -34,6 +34,11 @@
   vertical-align: middle;
 }
 
+.animation-back-in-down-2s {
+  animation: backInDown;
+  animation-duration: 2s;
+}
+
 @media (max-width: 768px) {
   .search-field {
     max-width: 100%;
