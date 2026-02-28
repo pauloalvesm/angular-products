@@ -1,5 +1,11 @@
-module.exports = {
+export default {
   preset: 'jest-preset-angular',
   setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
-  globalSetup: 'jest-preset-angular/global-setup',
+
+  moduleNameMapper: {
+    '^src/(.*)$': '<rootDir>/src/$1',
+    '^app/(.*)$': '<rootDir>/src/app/$1'
+  },
+  transformIgnorePatterns: ['node_modules/(?!.*\\.mjs$)'],
+  testEnvironment: 'jsdom'
 };
