@@ -15,6 +15,7 @@ Repository with MVP of a web application for cataloging a list of products. The 
 - Form field validations
 - Responsive Styles
 - Element animations
+- Unit tests
 
 ## 🚀 Technologies and Tools
 
@@ -29,6 +30,7 @@ This project was developed using the following technologies:
   - `NPM v11.1.0`
   - `Angular Material`
   - `Angular Router`
+  - `Jest`
   - `Animate.css`
 
 
